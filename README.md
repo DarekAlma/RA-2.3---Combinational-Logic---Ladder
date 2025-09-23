@@ -152,6 +152,8 @@ Si una salida se enciende en más de una fila, se hace la suma lógica (OR, ∨)
 
 ## 2️. Implementación en CODESYS y uso de HMI
 
+### Explicación lenguaje ladder
+
   Ahora que ya tenemos los circuitos logicos podemos pasarlos a logica/diagrama ladder, en donde cambian un poco las cosas, su forma se asemeja a la de una escalera, es secuencial y se lee de izquierda a derecha y de arriba a abajo. Las entradas son representadas como "Contactos", [entrada], ubicadas en la parte izquierda de la escalera y estos pueden estar normalmente abiertos (1, si el evento es verdadero permite el flujo de corriente) o normalmente cerrados (0 / negación, permite flujo de corriente siempre hasta que el evento sea verdadero), las salidas son representadas como "bobinas", (salida), y estan ubicadas en la parte derecha de escalera. Para representar un AND se hace poniendo un contacto al lado del otro, es decir solo fluye la corriente si la condición de ambos se cumple, y para representar un OR se hace poniendo un contacto en paralelo con otro, es decir fluye la corriente si alguna o ambas de las dos condiciones se cumple.
 
 En Ladder cada rung (cada fila, que se asemeja a un escalon de la escalera) es equivalente a una ecuación booleana:
@@ -167,6 +169,11 @@ Diagram ladder que sale a partir de los circuitos logicos:
 ![Diagrama ladder a partir de los circuitos logicos](imagenes/DiagramaLadder2.jpg)
 
 En este caso se tomo la decisión de hacer uso de dos bobinas extras (T1 y T2), para poder simplificar la operación de H5 en el diagrama ladder.
+
+### CODESYS
+
+Implementamos el diagrama ladder que obtuvimos dentro de CODESYS
+
 
 ## 3. Implementación en OPENPLC
 
