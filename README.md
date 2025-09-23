@@ -172,7 +172,47 @@ En este caso se tomo la decisión de hacer uso de dos bobinas extras (T1 y T2), 
 
 ### CODESYS
 
-Implementamos el diagrama ladder que obtuvimos dentro de CODESYS
+¿Qué es CODESYS?
+
+    Es un entorno de desarrollo integrado (IDE) para programar PLCs (Programmable logic controller) usando los lenguajes definidos en la norma IEC 61131-3 (Ladder, Function Block Diagram, Structured Text, etc.).
+    
+    Permite crear programas de automatización industrial y simularlos para probar su funcionamiento.
+    
+    Incluye un módulo de visualización/HMI para construir interfaces gráficas de monitoreo y control.
+
+Definición de variables dentro de CODESYS:
+
+![Diagrama ladder CODESYS](imagenes/DefinicionDeVariablesCODESYS.jpg)
+
+Implementamos el diagrama ladder que obtuvimos dentro de CODESYS:
+
+![Diagrama ladder CODESYS](imagenes/DiagramaLadderCODESYS.jpg)
+
+HMI en CODESYS: 
+
+![HMI](imagenes/HMICODESYS.jpg)
+
+Una **HMI (Human-Machine Interface)** es la interfaz que permite la comunicación entre el operador y el proceso automatizado.  
+Su función es **mostrar de manera gráfica la información del sistema** (niveles, alarmas, estados) y permitir que el usuario **interactúe con el PLC** de forma sencilla.
+
+En este proyecto la HMI nos sirve para:
+- Visualizar los estados de los sensores de nivel (**b1, b2, b3**).  
+- Observar las salidas (**H1–H5**) representadas con indicadores luminosos.  
+- Simular el comportamiento del tanque sin necesidad de conectar hardware físico.  
+
+### ¿Cómo funciona dentro de CODESYS?
+- CODESYS incluye un editor de Visualizations donde se pueden crear pantallas gráficas.  
+- Cada elemento gráfico (botón, lámpara, texto) se vincula directamente a una variable del PLC.  
+
+Ejemplo:
+- Un **botón toggle** se conecta a la variable `b1` → al presionarlo simula que el sensor bajo se activa.  
+- Una **lámpara** se conecta a la variable `H1` → se enciende si la lógica del PLC determina que el tanque está en el nivel correcto.  
+
+Durante la simulación, el PLC ejecuta el programa en **Ladder**, y la HMI refleja en tiempo real el estado de las entradas y salidas.
+
+
+
+
 
 
 ## 3. Implementación en OPENPLC
