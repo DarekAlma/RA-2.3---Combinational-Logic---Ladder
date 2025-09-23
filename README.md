@@ -39,17 +39,65 @@ Que led este prendido depende de la combinación de los valores de los tres sens
   
   ### Funciones booleanas
   
-    Explica cómo sacaste cada función de la tabla (usa las ecuaciones finales):
+  1. Principio general
+  Una función booleana se deriva identificando las filas donde la salida vale 1. Para cada fila con salida = 1 se construye un producto lógico (AND) de las entradas.
     
-    H1 = b1 ∧ b2 ∧ ¬b3
+  En ese producto, cada entrada va:
     
-    H2 = b1 ∧ ¬b2 ∧ ¬b3
+    Directa si en la fila su valor es 1.
+      
+    Negada (¬) si en la fila su valor es 0.
+
+  Si una salida se enciende en más de una fila, se hace la suma lógica (OR, ∨) de todos esos productos.
+
+  2. Aplicando al caso
+
+  H1 (correct)
+
+    Solo se enciende en la fila 110 (b1=1, b2=1, b3=0).
     
-    H3 = b1 ∧ b2 ∧ b3
+    Entonces: H1 = b1 ∧ b2 ∧ ¬b3
+
+  H2 (too low)
+  
+    Solo se enciende en la fila 100 (b1=1, b2=0, b3=0).
     
-    H4 = ¬b1 ∧ ¬b2 ∧ ¬b3
+    Entonces: H2 = b1 ∧ ¬b2 ∧ ¬b3
+  
+  H3 (too high)
+  
+    Solo se enciende en la fila 111 (b1=1, b2=1, b3=1).
     
-    H5 = (¬b1 ∧ (b2 ∨ b3)) ∨ (b3 ∧ ¬b2)
+    Entonces: H3 = b1 ∧ b2 ∧ b3
+  
+  H4 (empty)
+  
+    Solo se enciende en la fila 000 (b1=0, b2=0, b3=0).
+    
+    Entonces: H4 = ¬b1 ∧ ¬b2 ∧ ¬b3
+  
+  H5 (error)
+  
+    Se enciende en varias filas (001, 010, 011, 101).
+    
+    Si escribiéramos todas esas filas como minterms, tendríamos 4 productos OR.
+    
+    Pero podemos simplificar detectando el patrón común de inconsistencia:
+    
+      Error si b3=1 pero b2=0 → (b3 ∧ ¬b2)
+      
+      Error si b3=1 pero b1=0 → (b3 ∧ ¬b1)
+      
+      Error si b2=1 pero b1=0 → (b2 ∧ ¬b1)
+    
+    Resultado simplificado: H5 = (¬b1 ∧ (b2 ∨ b3)) ∨ (b3 ∧ ¬b2)
+
+  3. En resumen
+  Cada función booleana es la traducción directa de la tabla:
+  
+  H1–H4 corresponden a un único minterm (una sola combinación de entradas).
+  
+  H5 corresponde a la OR de varios minterms, luego simplificada para reducir puertas.
   
   ### Circuito lógico
   
