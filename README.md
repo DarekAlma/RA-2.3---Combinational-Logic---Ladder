@@ -33,6 +33,8 @@ Que led este prendido depende de la combinación de los valores de los tres sens
   ### Tabla de verdad
 
   ![Tabla de verdad](imagenes/TablaDeVerdad.jpg)
+
+  Esta es la tabla de verdad resultante del comportamiento planteado en la actividad, cada entrada y salida tiene su respectiva columna y hay una columna extra que nos indica cual es el estado esperado a partir de las entradas. Cada fila tiene una combinación diferente en los valores que toman las entradas, siendo 0 ausencia del liquido en ese sensor y 1 presencia del liquido en ese sensor, la cantidad de filas que hay depende de la cantidad de entradas,en nuestro caso tenemos tres entradas, por ende operamos 2^3 = 8, la cantidad de filas que tiene la tabla de verdad. De H1 a H4, solo hay una combinación que permite dichas salidas, por el mismo planteamieto del ejercicio, pero para H5 hay cuatro combinaciones distintas que dan como resultado esta salida y esto se debe a que hay diferentes maneras en las cuales se podria presentar un error en el sistema. 
   
   
   ### Funciones booleanas
