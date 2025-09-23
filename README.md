@@ -236,7 +236,41 @@ Error:
     - Mapear las entradas (`b1, b2, b3` → %IX0.0–%IX0.2) y salidas (`H1–H5` → %QX0.0–%QX0.4).  
     - Validar el comportamiento del sistema en un prototipo físico con **DIP switches** como sensores y **LEDs** como indicadores.  
 
-El proceso de la definición de las variables cambia en comparacion con CODESYS debido a que aqui si tenemos que definir una dirección fisica de donde saldra esta variable en el microcontrolador en este caso el ARDUINO UNO
+### 📑 Definición de variables en OPENPLC
+
+En OpenPLC todas las entradas y salidas deben declararse como **variables** y asociarse a una dirección física del PLC o del dispositivo en uso (en este caso, el Arduino Uno).  
+Las direcciones se expresan con el formato **%IX** para entradas digitales y **%QX** para salidas digitales:
+
+- **%IX** → Input (entrada digital).  
+- **%QX** → Output (salida digital).  
+- El número después indica el byte y el bit (ejemplo: %IX0.0 es la primera entrada del primer byte).  
+
+En este proyecto se definieron las siguientes variables:
+
+| Variable | Dirección | Descripción                           | Hardware            |
+|----------|-----------|---------------------------------------|---------------------|
+| b1       | %IX0.0    | Sensor de nivel bajo                  | DIP switch → D2     |
+| b2       | %IX0.1    | Sensor de nivel medio                 | DIP switch → D3     |
+| b3       | %IX0.2    | Sensor de nivel alto                  | DIP switch → D4     |
+| H1       | %QX0.0    | LED – Nivel correcto (110)            | LED → D7            |
+| H2       | %QX0.1    | LED – Nivel demasiado bajo (100)      | LED → D8            |
+| H3       | %QX0.2    | LED – Nivel demasiado alto (111)      | LED → D9            |
+| H4       | %QX0.3    | LED – Tanque vacío (000)              | LED → D10           |
+| H5       | %QX0.4    | LED – Error (inconsistencias)         | LED → D11           |
+
+De esta manera, cada variable en el programa Ladder corresponde a un pin físico del Arduino Uno, lo que permite que las simulaciones en OpenPLC se traduzcan directamente en señales reales de entrada y salida.
+
+La documentación de OPENPLC menciona unicamente estas variables:
+
+Digital In	A0, A1, A2, A3, A4, A5, A6, A7	%IX0.0 – %IX0.7
+
+Digital Out	D0, D1, D2, D3	%QX0.0 – %QX0.3
+
+Queda faltando un digital out, debido a que se cuenta con 5 leds, para esto tenemos que hace la modificacion en el momento que vayamos a transerir el programa al plc en la parte de I/O Config, donde nos dicen cuales son los pines del arduino correspondientes a digital y analog inputs / outputs, modificaremos estos pines quitando el pin 6 de input y poniendola en output, con esto podemos contar con una dirección mas de outputs.
+
+![pinesOPENPLC](imagenes/configuracionIOOPENPLC.png)
+
+
 
 ## 4. Validación con OPENPLC y Hardware (Arduino Uno) 
 
