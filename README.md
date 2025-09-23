@@ -182,15 +182,15 @@ En este caso se tomo la decisión de hacer uso de dos bobinas extras (T1 y T2), 
 
 Definición de variables dentro de CODESYS:
 
-![Diagrama ladder CODESYS](imagenes/DefinicionDeVariablesCODESYS.jpg)
+![Diagrama ladder CODESYS](imagenes/DefinicionDeVariablesCODESYS.png)
 
 Implementamos el diagrama ladder que obtuvimos dentro de CODESYS:
 
-![Diagrama ladder CODESYS](imagenes/DiagramaLadderCODESYS.jpg)
+![Diagrama ladder CODESYS](imagenes/DiagramaLadderCODESYS.png)
 
 HMI en CODESYS: 
 
-![HMI](imagenes/HMICODESYS.jpg)
+![HMI](imagenes/HMICODESYS.png)
 
 Una **HMI (Human-Machine Interface)** es la interfaz que permite la comunicación entre el operador y el proceso automatizado.  
 Su función es **mostrar de manera gráfica la información del sistema** (niveles, alarmas, estados) y permitir que el usuario **interactúe con el PLC** de forma sencilla.
