@@ -40,15 +40,15 @@ Que led este prendido depende de la combinación de los valores de los tres sens
   ### Funciones booleanas
   
 1. Principio general
-    Una función booleana se deriva identificando las filas donde la salida vale 1. Para cada fila con salida = 1 se construye un producto lógico (AND) de las entradas.
+Una función booleana se deriva identificando las filas donde la salida vale 1. Para cada fila con salida = 1 se construye un producto lógico (AND) de las entradas.
       
-    En ese producto, cada entrada va:
+En ese producto, cada entrada va:
       
       Directa si en la fila su valor es 1.
         
       Negada (¬) si en la fila su valor es 0.
   
-    Si una salida se enciende en más de una fila, se hace la suma lógica (OR, ∨) de todos esos productos.
+Si una salida se enciende en más de una fila, se hace la suma lógica (OR, ∨) de todos esos productos.
 
 2. Aplicando al caso
 
