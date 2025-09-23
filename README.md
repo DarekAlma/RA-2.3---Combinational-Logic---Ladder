@@ -162,10 +162,11 @@ En Ladder cada rung (cada fila, que se asemeja a un escalon de la escalera) es e
     
     Si usamos un contacto cerrado [/b3], representamos la negación ¬b3.
 
+Diagram ladder que sale a partir de los circuitos logicos:
+
 ![Diagrama ladder a partir de los circuitos logicos](imagenes/DiagramaLadder.jpg)
 
-  
-  Explica cómo se usaron bobinas intermedias para simplificar el error (T1, T2 → H5).
+En este caso se tomo la decisión de hacer uso de dos bobinas extras (T1 y T2), para poder simplificar la operación de H5 en el diagrama ladder.
 
 ## 3. Implementación en OPENPLC
 
