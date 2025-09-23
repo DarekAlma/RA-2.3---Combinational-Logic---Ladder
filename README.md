@@ -32,7 +32,7 @@ Que led este prendido depende de la combinación de los valores de los tres sens
 
   ### Tabla de verdad
 
-    ![Tabla de verdad](imagenes/TablaDeVerdad.png)
+    ![Tabla de verdad](imagenes/TablaDeVerdad.jpg)
   
   
   ### Funciones booleanas
