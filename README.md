@@ -152,9 +152,18 @@ Si una salida se enciende en más de una fila, se hace la suma lógica (OR, ∨)
 
 ## 2️. Implementación en CODESYS y uso de HMI
 
-  Explica la traducción: contactos normalmente abiertos/cerrados para representar variables y negaciones.
-  
-  Incluye el ladder de todos los rungs (con capturas o exportado).
+  Ahora que ya tenemos los circuitos logicos podemos pasarlos a logica/diagrama ladder, en donde cambian un poco las cosas, su forma se asemeja a la de una escalera, es secuencial y se lee de izquierda a derecha y de arriba a abajo. Las entradas son representadas como "Contactos", [entrada], ubicadas en la parte izquierda de la escalera y estos pueden estar normalmente abiertos (1, si el evento es verdadero permite el flujo de corriente) o normalmente cerrados (0 / negación, permite flujo de corriente siempre hasta que el evento sea verdadero), las salidas son representadas como "bobinas", (salida), y estan ubicadas en la parte derecha de escalera. Para representar un AND se hace poniendo un contacto al lado del otro, es decir solo fluye la corriente si la condición de ambos se cumple, y para representar un OR se hace poniendo un contacto en paralelo con otro, es decir fluye la corriente si alguna o ambas de las dos condiciones se cumple.
+
+En Ladder cada rung (cada fila, que se asemeja a un escalon de la escalera) es equivalente a una ecuación booleana:
+
+    Si conectamos en serie [b1]--[b2] y al final (H1), estamos implementando H1 = b1 ∧ b2.
+    
+    Si ponemos contactos en paralelo [b1] y [b2] antes de (H2), implementamos H2 = b1 ∨ b2.
+    
+    Si usamos un contacto cerrado [/b3], representamos la negación ¬b3.
+
+![Diagrama ladder a partir de los circuitos logicos](imagenes/DiagramaLadder.jpg)
+
   
   Explica cómo se usaron bobinas intermedias para simplificar el error (T1, T2 → H5).
 
