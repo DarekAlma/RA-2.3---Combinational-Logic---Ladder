@@ -214,15 +214,15 @@ Ejemplo del funcionamiento del PLC:
 
 Tanque vacio:
 
-![HMIVacio](imagenes/tanquevacio.pn)
+![HMIVacio](imagenes/tanquevacio.png)
 
 Tanque en el estado ideal:
 
-![HMIIdeal](imagenes/tanquenivelideal.pn)
+![HMIIdeal](imagenes/tanquenivelideal.png)
 
 Error:
 
-![HMIIError](imagenes/tanqueerror.pn)
+![HMIIError](imagenes/tanqueerror.png)
 
 
 ## 3. Implementación en OPENPLC
