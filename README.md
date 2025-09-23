@@ -11,15 +11,21 @@ Se definieron para el proyecto tres entradas/inputs y cinco salidas/outputs, con
   Inputs (Los tres seran considerados sensores):
 
   b1: Tanque vacio.
+  
   b2: Lleno al minimo nivel.
+  
   b3: Tanque muy lleno, al punto de desbordarse.
 
   Outputs (Los cinco seran considerados LEDs):
 
   H1: Nivel de llenado correcto
+  
   H2: Nivel de llenado demasiado bajo
+  
   H3: Nivel de llenado demasiado alto
+  
   H4: Tanque vacio.
+  
   H5: Error, estados no posibles.
 
 Que led este prendido depende de la combinación de los valores de los tres sensores, y solo podra haber un led prendido a la vez, es decir cada led tiene una combinación unica de los estados de la entradas que hace que unicamente este se prenda. Para esto tenemos que hacer la tabla de verdad que es donde pondremos las distintas combinaciones en las que se pueden encontrar las entradas y cual es la salida esperada.
