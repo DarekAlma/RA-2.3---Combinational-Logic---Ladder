@@ -103,34 +103,45 @@ Si una salida se enciende en más de una fila, se hace la suma lógica (OR, ∨)
   ### Circuito lógico
 
   ### H1 – Fill Level Correct (110)
+
+  ![](imagenes/CircuitoH1.jpg)
+  
   El circuito se activa únicamente cuando **b1=1**, **b2=1** y **b3=0**.  
   - Se implementa con un **AND de tres entradas**, donde entran directamente b1 y b2, y la señal negada de b3 (¬b3).  
   - Esto garantiza que el LED H1 solo se encienda cuando los dos sensores inferiores están activos y el superior apagado, condición que representa el nivel deseado del tanque.
   
-  ---
   
   ### H2 – Fill Level Too Low (100)
+
+  ![](imagenes/CircuitoH2.jpg)
+
   Este circuito detecta cuando **solo el sensor inferior b1 está activo** (b1=1, b2=0, b3=0).  
   - Se implementa con un **AND de tres entradas** que combina b1, ¬b2 y ¬b3.  
   - De esta forma, H2 se enciende únicamente cuando el tanque tiene líquido en el nivel más bajo, indicando que el nivel es insuficiente.
   
-  ---
   
   ### H3 – Fill Level Too High (111)
+
+  ![](imagenes/CircuitoH3.jpg)
+  
   Se enciende cuando **todos los sensores están activos** (b1=1, b2=1, b3=1).  
   - Se implementa con un **AND de tres entradas** sin negaciones, porque los tres deben estar en estado 1.  
   - Representa que el tanque está lleno y el nivel es demasiado alto.
   
-  ---
   
   ### H4 – Tank Empty (000)
+
+  ![](imagenes/CircuitoH4.jpg)
+  
   Este circuito se activa cuando **ningún sensor detecta líquido** (b1=0, b2=0, b3=0).  
   - Se implementa con un **AND de tres entradas** de las señales negadas: ¬b1, ¬b2 y ¬b3.  
   - El LED H4 se enciende cuando el tanque está vacío.
   
-  ---
   
   ### H5 – Error (inconsistencias de sensores)
+
+  ![](imagenes/CircuitoH5.jpg)
+  
   El circuito de error se enciende cuando las combinaciones de sensores no tienen sentido físico (ej. b3=1 y b2=0).  
   - Se construyó detectando dos condiciones principales:  
     - **¬b1 ∧ (b2 ∨ b3)** → cuando los sensores medio o alto detectan líquido, pero el inferior no.  
