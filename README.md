@@ -292,8 +292,6 @@ Diagrama ladder en OPENPLC:
   Incluye foto o esquema del cableado.
   
   Configuración de OpenPLC
-  
-  Muestra cómo asignaste %IX/%QX a pines.
 
   Pega el arduino_settings.json corregido.
 
