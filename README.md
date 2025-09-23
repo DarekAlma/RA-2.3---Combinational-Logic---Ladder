@@ -227,11 +227,16 @@ Error:
 
 ## 3. Implementación en OPENPLC
 
-  Explica la traducción: contactos normalmente abiertos/cerrados para representar variables y negaciones.
+  **OpenPLC** es una plataforma de código abierto para programar y ejecutar lógicas de control en diferentes tipos de hardware.  
+  Permite cargar programas en lenguajes IEC 61131-3 (como Ladder) y ejecutarlos en controladores reales como el **Arduino Uno**.  
+
+  En este proyecto se utilizó OpenPLC para:
   
-  Incluye el ladder de todos los rungs (con capturas o exportado).
-  
-  Explica cómo se usaron bobinas intermedias para simplificar el error (T1, T2 → H5).
+    - Traducir el programa de CODESYS a un entorno libre y compatible con hardware accesible.  
+    - Mapear las entradas (`b1, b2, b3` → %IX0.0–%IX0.2) y salidas (`H1–H5` → %QX0.0–%QX0.4).  
+    - Validar el comportamiento del sistema en un prototipo físico con **DIP switches** como sensores y **LEDs** como indicadores.  
+
+El proceso de la definición de las variables cambia en comparacion con CODESYS debido a que aqui si tenemos que definir una dirección fisica de donde saldra esta variable en el microcontrolador en este caso el ARDUINO UNO
 
 ## 4. Validación con OPENPLC y Hardware (Arduino Uno) 
 
