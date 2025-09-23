@@ -265,7 +265,7 @@ Variables dentro de OPENPLC:
 ![variablesPLC](imagenes/variablesenOPENPLC.png)
 
 
-La documentación de OPENPLC menciona unicamente estas variables:
+La documentación de OPENPLC (https://autonomylogic.com/docs/2-4-physical-addressing/) menciona unicamente estas variables:
 
 Digital In	A0, A1, A2, A3, A4, A5, A6, A7	%IX0.0 – %IX0.7
 
