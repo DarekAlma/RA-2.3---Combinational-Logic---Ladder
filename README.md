@@ -243,7 +243,17 @@ Las direcciones se expresan con el formato **%IX** para entradas digitales y **%
 
 - **%IX** → Input (entrada digital).  
 - **%QX** → Output (salida digital).  
-- El número después indica el byte y el bit (ejemplo: %IX0.0 es la primera entrada del primer byte).  
+- El número después indica el byte y el bit (ejemplo: %IX0.0 es la primera entrada del primer byte).
+
+La documentación de OPENPLC (https://autonomylogic.com/docs/2-4-physical-addressing/) menciona unicamente estas direcciones para digital In/Out :
+
+Digital In	A0, A1, A2, A3, A4, A5, A6, A7	%IX0.0 – %IX0.7
+
+Digital Out	D0, D1, D2, D3	%QX0.0 – %QX0.3
+
+Queda faltando un digital out, debido a que se cuenta con 5 leds, para esto tenemos que hace la modificacion en el momento que vayamos a transerir el programa al plc en la parte de I/O Config, donde nos dicen cuales son los pines del arduino correspondientes a digital y analog inputs / outputs, modificaremos estos pines quitando el pin 6 de input y poniendola en output, con esto podemos contar con una dirección mas de outputs.
+
+![pinesOPENPLC](imagenes/configuracionIOOPENPLC.png)
 
 En este proyecto se definieron las siguientes variables:
 
@@ -264,16 +274,6 @@ Variables dentro de OPENPLC:
 
 ![variablesPLC](imagenes/variablesenOPENPLC.png)
 
-
-La documentación de OPENPLC (https://autonomylogic.com/docs/2-4-physical-addressing/) menciona unicamente estas variables:
-
-Digital In	A0, A1, A2, A3, A4, A5, A6, A7	%IX0.0 – %IX0.7
-
-Digital Out	D0, D1, D2, D3	%QX0.0 – %QX0.3
-
-Queda faltando un digital out, debido a que se cuenta con 5 leds, para esto tenemos que hace la modificacion en el momento que vayamos a transerir el programa al plc en la parte de I/O Config, donde nos dicen cuales son los pines del arduino correspondientes a digital y analog inputs / outputs, modificaremos estos pines quitando el pin 6 de input y poniendola en output, con esto podemos contar con una dirección mas de outputs.
-
-![pinesOPENPLC](imagenes/configuracionIOOPENPLC.png)
 
 Diagrama ladder en OPENPLC:
 
