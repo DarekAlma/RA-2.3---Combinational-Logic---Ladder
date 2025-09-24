@@ -287,18 +287,32 @@ Simulación dentro de OPENPLC, simulando el estado de tanque al nivel ideal:
 
 
 ## 4. Validación con OPENPLC y Hardware (Arduino Uno) 
-
-  Entradas: DIP switch de 3 posiciones conectado a pines D2–D4 (%IX0.0–%IX0.2).
   
-  Salidas: 5 LEDs con resistencias en pines D7–D11 (%QX0.0–%QX0.4).
+  Configuración de OpenPLC:
+
+  Para poder pasar la logica al PLC usamos la opción de "Transfer program to PLC", es necesario tener el arduino conectado mediante el cable USB serial al computador, al hacer esto se podra seleccionar el puerto de comunicación y el tipo de board que se utiliza, en este caso el Arduino UNO.
+  
+  ![TransferProgramOPENPLC](imagenes/conexionArduinoAPC.jpg)
+
+  ![TransferProgramOPENPLC](imagenes/simulacionEnOPENPLC.png)
+
+  Despues de verificar esta en la placa y puerto correcto, le damos click al boton de "Transfer to PLC". Toca esperar un tiempo mientras se sube la logica ladder que hicimos al Arduino UNO, si la logica esta correcta deberia mostrar el siguiente mensaje en OPENPLC y con esto ya esta subido el programa al ARDUINO y se puede pasar a hacer el montaje fisico.
+
+  ![TransferProgramOPENPLC](imagenes/ProgramaSubidoCorrectamenteOPENPLC.png)
+
+
+
+  Circuito fisico/Hardware:
+
+  Entradas: DIP switch de 3 posiciones conectado a pines D2 ,D3 Y D4 (%IX0.0–%IX0.2).
+  
+  Salidas: 5 LEDs con resistencias en pines D6, D7, D8, D12 Y D13 (%QX0.0–%QX0.4). Parte positiva del led conectada a la salida correspondiente, para que el led se ilumine unicamente cuando recibe 1 por parte del arduino.
   
   Fuente: 5 V del propio Arduino.
-  
-  Incluye foto o esquema del cableado.
-  
-  Configuración de OpenPLC
 
-  Pega el arduino_settings.json corregido.
+  Foto del circuito fisico:
+
+
 
 
 ## 5️. Resultados y conclusiones
@@ -309,6 +323,3 @@ Simulación dentro de OPENPLC, simulando el estado de tanque al nivel ideal:
   
   Se logró simular en CODESYS y validar en hardware real con Arduino Uno.
 
-El error se detecta para estados inválidos.
-
-Se logró simular en CODESYS y validar en hardware real con Arduino Uno.
