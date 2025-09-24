@@ -236,7 +236,7 @@ Error:
     - Mapear las entradas (`b1, b2, b3` → %IX0.0–%IX0.2) y salidas (`H1–H5` → %QX0.0–%QX0.4).  
     - Validar el comportamiento del sistema en un prototipo físico con **DIP switches** como sensores y **LEDs** como indicadores.  
 
-### 📑 Definición de variables en OPENPLC
+### Definición de variables en OPENPLC
 
 En OpenPLC todas las entradas y salidas deben declararse como **variables** y asociarse a una dirección física del PLC o del dispositivo en uso (en este caso, el Arduino Uno).  
 Las direcciones se expresan con el formato **%IX** para entradas digitales y **%QX** para salidas digitales:
