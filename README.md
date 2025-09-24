@@ -279,6 +279,11 @@ Diagrama ladder en OPENPLC:
 
 ![pinesOPENPLC](imagenes/ladderOPENPLC.png)
 
+Simulación dentro de OPENPLC, simulando el estado de tanque al nivel ideal: 
+
+![SimulacionOPENPLC](imagenes/simulacionEnOPENPLC.png)
+
+
 
 
 ## 4. Validación con OPENPLC y Hardware (Arduino Uno) 
