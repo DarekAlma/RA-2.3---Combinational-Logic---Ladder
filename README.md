@@ -292,13 +292,13 @@ Simulación dentro de OPENPLC, simulando el estado de tanque al nivel ideal:
 
   Para poder pasar la logica al PLC usamos la opción de "Transfer program to PLC", es necesario tener el arduino conectado mediante el cable USB serial al computador, al hacer esto se podra seleccionar el puerto de comunicación y el tipo de board que se utiliza, en este caso el Arduino UNO.
   
-  ![TransferProgramOPENPLC](imagenes/conexionArduinoAPC.jpg)
+  ![ConexionArduinoAPC](imagenes/conexionArduinoAPC.jpg)
 
-  ![TransferProgramOPENPLC](imagenes/simulacionEnOPENPLC.png)
+  ![TransferProgramOPENPLC](imagenes/TransferProgramOPENPLC.png)
 
   Despues de verificar esta en la placa y puerto correcto, le damos click al boton de "Transfer to PLC". Toca esperar un tiempo mientras se sube la logica ladder que hicimos al Arduino UNO, si la logica esta correcta deberia mostrar el siguiente mensaje en OPENPLC y con esto ya esta subido el programa al ARDUINO y se puede pasar a hacer el montaje fisico.
 
-  ![TransferProgramOPENPLC](imagenes/ProgramaSubidoCorrectamenteOPENPLC.png)
+  ![ProgramaSubidoCorrectamente](imagenes/ProgramaSubidoCorrectamenteOPENPLC.png)
 
 
 
