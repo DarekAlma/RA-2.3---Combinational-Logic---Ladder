@@ -304,11 +304,13 @@ Simulación dentro de OPENPLC, simulando el estado de tanque al nivel ideal:
 
   Circuito fisico/Hardware:
 
-  Entradas: DIP switch de 3 posiciones conectado a pines D2 ,D3 Y D4 (%IX0.0–%IX0.2).
+  Entradas: DIP switch de 4 posiciones conectado a pines D2 ,D3 Y D4 (%IX0.0–%IX0.2).
   
-  Salidas: 5 LEDs con resistencias en pines D6, D7, D8, D12 Y D13 (%QX0.0–%QX0.4). Parte positiva del led conectada a la salida correspondiente, para que el led se ilumine unicamente cuando recibe 1 por parte del arduino.
+  Salidas: 5 LEDs en pines D6, D7, D8, D12 Y D13 (%QX0.0–%QX0.4). Parte positiva del led conectada a la salida correspondiente, para que el led se ilumine unicamente cuando recibe 1 por parte del arduino.
   
   Fuente: 5 V del propio Arduino.
+
+  Para el montaje se hiz uso de una protoboard, el Arduino UNO, 5 leds (opcionalmente agregarles resistencias), un dipswitch de 4 entradas (Resistencias de 10K ohm conectadas a ground, resistencias pull down), y jumpers para conectar de los pines del arduino a la proto.
 
   Foto del circuito fisico:
 
