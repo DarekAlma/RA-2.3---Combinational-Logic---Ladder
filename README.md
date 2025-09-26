@@ -332,6 +332,31 @@ Simulación dentro de OPENPLC, simulando el estado de tanque al nivel ideal:
 
    ![ProgramaSubidoCorrectamente](imagenes/fotocablesdesdearduino.jpg)
 
+   Estado tanque vacio 
+
+   ![vacio](imagenes/vaciosensor.jpg)
+
+   Estado tanque casi vacio 
+
+   ![casi](imagenes/estadocasivacio.jpg)
+
+   Estado tanque ideal
+
+   ![ideal](imagenes/estadoideal.jpg)
+
+   Estado tanque lleno 
+
+   ![lleno](imagenes/llenosensor.jpg)
+
+   Estado tanque error 1
+
+   ![error1](imagenes/errror1.jpg)
+
+   Estado tanque error 2 
+
+   ![error2](imagenes/error2.jpg)
+   
+
 ## 5. Referencias:
 
 [1] CODESYS Group, “CODESYS Development System – your programming tool,” CODESYS Group. [Online]. Available: https://us.codesys.com/products/engineering/development-system/.
