@@ -174,9 +174,7 @@ En este caso se tomo la decisión de hacer uso de dos bobinas extras (T1 y T2), 
 
 ¿Qué es CODESYS?
 
-    Es un entorno de desarrollo integrado (IDE) para programar PLCs (Programmable logic controller) usando los lenguajes definidos en la norma IEC 61131-3 (Ladder, Function Block Diagram, Structured Text, etc.).
-    
-    Permite crear programas de automatización industrial y simularlos para probar su funcionamiento.
+    “The CODESYS Development System is the core of the software platform. It implements the international IEC 61131-3 standard” [1], el cual define los lenguajes de programación aceptados para PLCs, tales como Ladder, Function Block Diagram, Structured Text y Sequential Function Chart.
     
     Incluye un módulo de visualización/HMI para construir interfaces gráficas de monitoreo y control.
 
@@ -245,7 +243,7 @@ Las direcciones se expresan con el formato **%IX** para entradas digitales y **%
 - **%QX** → Output (salida digital).  
 - El número después indica el byte y el bit (ejemplo: %IX0.0 es la primera entrada del primer byte).
 
-La documentación de OPENPLC (https://autonomylogic.com/docs/2-4-physical-addressing/) menciona unicamente estas direcciones para digital In/Out :
+La documentación de OPENPLC [2] menciona unicamente estas direcciones para digital In/Out :
 
 Digital In	A0, A1, A2, A3, A4, A5, A6, A7	%IX0.0 – %IX0.7
 
@@ -314,14 +312,11 @@ Simulación dentro de OPENPLC, simulando el estado de tanque al nivel ideal:
 
   Foto del circuito fisico:
 
+5. Referencias:
+
+[1] CODESYS Group, “CODESYS Development System – your programming tool,” CODESYS Group. [Online]. Available: https://us.codesys.com/products/engineering/development-system/.
+[2] Autonomy Logic, "OpenPLC Documentation – Physical Addressing," Autonomy Logic, 2024. [Online]. Available: https://autonomylogic.com/docs/2-4-physical-addressing/.
 
 
 
-## 5️. Resultados y conclusiones
-
-  La lógica combinacional funciona correctamente.
-  
-  El error se detecta para estados inválidos.
-  
-  Se logró simular en CODESYS y validar en hardware real con Arduino Uno.
 
