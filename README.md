@@ -327,6 +327,10 @@ Simulación dentro de OPENPLC, simulando el estado de tanque al nivel ideal:
   Para el montaje se hiz uso de una protoboard, el Arduino UNO, 5 leds (opcionalmente agregarles resistencias), un dipswitch de 4 entradas, y jumpers para conectar de los pines del arduino a la protoboard. Para que los dipswitches funcionaran se usaron resistencias de 2.3 k ohmneos, tanto para el output como para la parte de abajo del dipswitch, en la practica me di cuenta que este funciona con resistencia pull up, estas son las que le permiten cambiar de estado correctamente en el momento que uno cambie el switch respectivo, asi mismo fue necesario ponerle resistencias en el output debido que si el dipswitch estaba en 0, los outputs aun los leia como uno despues de cierto tiempo, posiblemente por el ruido dentro de la protoboard, por esto mismo conecte resistencia pull down es decir hacia ground para que manteniera un estado estable de 0 cuando no habia ningun cambio en la señal sin que hubiera un cambio en el dipswitch, pero si uno hacia un cambio si cambia correctamente el estado y servia de la manera esperada.
 
   Fotos del circuito fisico:
+   
+   ![ProgramaSubidoCorrectamente](imagenes/fotocircuito1.jpg)
+
+   ![ProgramaSubidoCorrectamente](imagenes/fotocablesdesdearduino.jpg)
 
 ## 5. Referencias:
 
