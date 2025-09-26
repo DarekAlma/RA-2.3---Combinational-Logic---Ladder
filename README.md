@@ -316,8 +316,7 @@ Simulación dentro de OPENPLC, simulando el estado de tanque al nivel ideal:
   ![ProgramaSubidoCorrectamente](imagenes/ProgramaSubidoCorrectamenteOPENPLC.png)
 
 
-
-  Circuito fisico/Hardware:
+  ### Circuito fisico/Hardware:
 
   Entradas: DIP switch de 4 posiciones conectado a pines D2 ,D3 Y D4 (%IX0.0–%IX0.2).
   
@@ -325,11 +324,11 @@ Simulación dentro de OPENPLC, simulando el estado de tanque al nivel ideal:
   
   Fuente: 5 V del propio Arduino.
 
-  Para el montaje se hiz uso de una protoboard, el Arduino UNO, 5 leds (opcionalmente agregarles resistencias), un dipswitch de 4 entradas (Resistencias de 10K ohm conectadas a ground, resistencias pull down), y jumpers para conectar de los pines del arduino a la proto.
+  Para el montaje se hiz uso de una protoboard, el Arduino UNO, 5 leds (opcionalmente agregarles resistencias), un dipswitch de 4 entradas, y jumpers para conectar de los pines del arduino a la protoboard. Para que los dipswitches funcionaran se usaron resistencias de 2.3 k ohmneos, tanto para el output como para la parte de abajo del dipswitch, en la practica me di cuenta que este funciona con resistencia pull up, estas son las que le permiten cambiar de estado correctamente en el momento que uno cambie el switch respectivo, asi mismo fue necesario ponerle resistencias en el output debido que si el dipswitch estaba en 0, los outputs aun los leia como uno despues de cierto tiempo, posiblemente por el ruido dentro de la protoboard, por esto mismo conecte resistencia pull down es decir hacia ground para que manteniera un estado estable de 0 cuando no habia ningun cambio en la señal sin que hubiera un cambio en el dipswitch, pero si uno hacia un cambio si cambia correctamente el estado y servia de la manera esperada.
 
-  Foto del circuito fisico:
+  Fotos del circuito fisico:
 
-5. Referencias:
+## 5. Referencias:
 
 [1] CODESYS Group, “CODESYS Development System – your programming tool,” CODESYS Group. [Online]. Available: https://us.codesys.com/products/engineering/development-system/.
 [2] Autonomy Logic, "OpenPLC Documentation – Physical Addressing," Autonomy Logic, 2024. [Online]. Available: https://autonomylogic.com/docs/2-4-physical-addressing/.
