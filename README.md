@@ -1,4 +1,4 @@
-# RA 2.3: Industrial Automation – Chemical Tank Level Monitoring 
+# RA 2.3: Industrial Automation – Chemical Tank Level Monitoring Darek Aljuri Martinez
 
 ![Ejercicio RA 2.3](imagenes/ejercicioRA23.png)
 
@@ -360,6 +360,7 @@ Simulación dentro de OPENPLC, simulando el estado de tanque al nivel ideal:
 ## 5. Referencias:
 
 [1] CODESYS Group, “CODESYS Development System – your programming tool,” CODESYS Group. [Online]. Available: https://us.codesys.com/products/engineering/development-system/.
+
 [2] Autonomy Logic, "OpenPLC Documentation – Physical Addressing," Autonomy Logic, 2024. [Online]. Available: https://autonomylogic.com/docs/2-4-physical-addressing/.
 
 
