@@ -210,6 +210,21 @@ Ejemplo:
 
 Durante la simulación, el PLC ejecuta el programa en **Ladder**, y la HMI refleja en tiempo real el estado de las entradas y salidas.
 
+Dependieno del tipo de objetivo que pongamos dentro del espacio de visualización tendremos una manera diferente con la cual asignarle la variable asociada al objeto, su comportamiento y estado visual.
+Para el caso de los interruptores y los leds es muy sencillo debido a que dentro de las propiedas ya aparece variable y solo es necesario asociarla, para los interruptores una input y para los leds una de output
+
+Para el caso de los interruptores se veria asi:
+
+![Interruptor](imagenes/interruptorvariableCODESYS.png)
+
+Para el caso de los leds se veria asi:
+
+![Led](imagenes/ledvariableCODESYS.png)
+
+Ahora para los otros objetos como lo seria cuadrados, rectangulos, texto, etc, toca meterse ya en otras secciones dentro de las propiedades, aqui asignaremos la variable de color y luego tenemos que modificar el objeto para el estado de alerta es decir cuando la variable output mande 1, asi mismo se podria esconder el objeto, pero para el caso del tanque lo dividi en diferentes objetos y cada uno lo asocie a la variable de sensor que le correspondia
+
+![Led](imagenes/estadoalertaCODESYS.png)
+
 Ejemplo del funcionamiento del PLC:
 
 Tanque vacio:
